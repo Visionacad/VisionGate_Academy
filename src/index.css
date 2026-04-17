@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@theme {
+  --color-surface: #faf9f5;
+  --color-surface-container-low: #f4f4f0;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary: #735b24;
+  --color-primary-container: #c8a96a;
+  --color-deep-charcoal: #0F172A;
+  --color-outline-variant: #d0c5b5;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  @apply font-sans antialiased bg-surface text-deep-charcoal overflow-x-hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display tracking-tight text-deep-charcoal;
+}
+
+.title-md {
+  @apply font-sans text-sm font-semibold tracking-widest uppercase text-primary/70;
+}
+
+.ambient-shadow {
+  box-shadow: 0 10px 60px rgba(15, 23, 42, 0.05);
+}
+
+.ghost-border {
+  @apply border border-outline-variant/15;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
